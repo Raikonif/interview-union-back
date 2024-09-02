@@ -36,13 +36,6 @@ public class Client implements Serializable {
     @Column(name = "gender")
     private String gender;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public @NotBlank String getName() {
         return name;
