@@ -3,7 +3,6 @@ package raikonif.apicrud.interview_union_back.entity;
 import java.io.Serializable;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "clients")
@@ -14,7 +13,6 @@ public class Client implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @NotBlank
     @Column(name = "name")
     private String name;
 
@@ -36,12 +34,19 @@ public class Client implements Serializable {
     @Column(name = "gender")
     private String gender;
 
+    public Long getId() {
+        return id;
+    }
 
-    public @NotBlank String getName() {
+    public void setId( Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public void setName(@NotBlank String name) {
+    public void setName( String name) {
         this.name = name;
     }
 
